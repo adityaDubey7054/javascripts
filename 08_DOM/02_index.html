@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice  DOM</title>
+</head>
+<body>
+       <div class="parents">
+          <div class="month">January</div>
+          <div class="month">February</div>
+          <div class="month">March</div>
+          <div class="month">April</div>
+
+
+       </div>
+       <script>
+          const parent = document.querySelector('.parents')
+        //   console.log(parent);
+        //   console.log(parent.children[0].innerText);
+          for(let i =0;i<parent.children.length;i++){
+            console.log(parent.children[i].innerText);
+          }
+
+
+
+          
+
+       </script>
+       
+
+    
+</body>
+</html>
