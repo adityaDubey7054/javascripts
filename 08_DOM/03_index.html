@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice DOM  model</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="company">
+        <li>Google</li>
+    </ul>
+   
+    
+</body>
+<script>
+  // This is static approach to create a list item  
+//    function addSport(team){
+//     const li = document.createElement('li');
+//     li.innerHTML = `${team}`;
+//     document.querySelector('.team').appendChild(li);
+
+    
+//    }
+//    addSport('Indian Football Team');
+//     addSport('Indian Hockey Team'); 
+
+    // This is optimal  approach to create a list item
+    function addCompany(company){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(company))
+        document.querySelector('.company').appendChild(li);
+
+    }
+    addCompany('Accenture');
+    addCompany('TCS');
+    addCompany('Infosys');
+    addCompany('Wipro');
+    addCompany('HCL');
+    addCompany('Tech Mahindra');
+    addCompany('Cognizant');
+    addCompany('Capgemini');
+    addCompany('IBM');
+    addCompany('Oracle');
+    // Edit the list item
+    const CaompanyName = document.querySelector('li:nth-child(3)');
+    const newName = document.createElement('li');
+    newName.textContent = 'Microsoft';
+    CaompanyName.replaceWith(newName);
+    addCompany('Microsoft');
+    const SecondCompanyName = document.querySelector('li:nth-child(2)');
+    const addname= document.createElement('li');
+    addname.textContent = 'Apple';
+    SecondCompanyName.replaceWith(addname);
+    addCompany('Apple');
+    // Another way to edit the list item
+    const lastCompany = document.querySelector(' li:last-child');
+    lastCompany.outerHTML = '<li>Amazon</li>';
+    addCompany('Amazon');
+
+
+</script>  
+</html>
